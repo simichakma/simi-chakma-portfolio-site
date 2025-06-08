@@ -1,5 +1,4 @@
-
-import { Github, Mail, Download, MapPin, Code, Database, Wrench, BookOpen, Award, ExternalLink } from "lucide-react";
+import { Github, Mail, Download, MapPin, Code, Database, Wrench, BookOpen, Award, ExternalLink, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -50,41 +49,89 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-6">
-        <div className="container mx-auto text-center">
-          <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-blue-500 p-1">
-            <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-6xl font-bold text-primary">
-              SC
+      {/* Enhanced Hero Section */}
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-blue-500/5"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div className="container mx-auto relative z-10">
+          <div className="text-center max-w-5xl mx-auto">
+            {/* Profile Image with enhanced styling */}
+            <div className="relative mx-auto mb-12 group">
+              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-primary via-blue-500 to-primary p-1 shadow-2xl shadow-primary/20 transition-all duration-500 group-hover:scale-105">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-card to-muted flex items-center justify-center text-4xl font-bold text-primary relative overflow-hidden">
+                  <span className="relative z-10">SC</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-3 h-3 bg-background rounded-full animate-pulse"></div>
+              </div>
             </div>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Hi. I'm <span className="gradient-text">Simi Chakma</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Aspiring <span className="text-primary font-semibold">Computer Science Engineer</span> with experience in IoT and ML. 
-            Turning ideas into tech solutions with innovation and code.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-3">
-              Hire me!
-            </Button>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3">
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume (PDF)
-            </Button>
-          </div>
-          <div className="flex justify-center space-x-6 mt-8">
-            <a href="https://github.com/simichakma" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="mailto:simichakma139@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail className="w-6 h-6" />
-            </a>
+
+            {/* Enhanced Typography */}
+            <div className="space-y-6 mb-12">
+              <div className="space-y-2">
+                <p className="text-lg md:text-xl text-primary font-medium tracking-wide animate-fade-in">
+                  Hello, I'm
+                </p>
+                <h1 className="text-6xl md:text-8xl font-bold leading-tight animate-fade-in delay-200">
+                  <span className="gradient-text">Simi Chakma</span>
+                </h1>
+              </div>
+              
+              <h2 className="text-2xl md:text-4xl font-light text-muted-foreground animate-fade-in delay-300">
+                Aspiring <span className="text-primary font-semibold">Computer Science Engineer</span>
+              </h2>
+              
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in delay-500">
+                Turning ideas into tech solutions with <span className="text-primary font-medium">IoT</span>, 
+                <span className="text-primary font-medium"> Machine Learning</span>, and innovative code.
+              </p>
+            </div>
+
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 animate-fade-in delay-700">
+              <Button className="bg-primary hover:bg-primary/80 text-primary-foreground px-10 py-4 text-lg rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105 group">
+                <span className="mr-2">Let's Work Together</span>
+                <ArrowDown className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 py-4 text-lg rounded-full shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 group">
+                <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                Download Resume
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+
+            {/* Enhanced Social Links */}
+            <div className="flex justify-center space-x-8 animate-fade-in delay-1000">
+              <a href="https://github.com/simichakma" 
+                 className="group relative p-4 rounded-full bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20">
+                <Github className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                <span className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-card border border-border px-3 py-1 rounded-md text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  GitHub Profile
+                </span>
+              </a>
+              <a href="mailto:simichakma139@gmail.com" 
+                 className="group relative p-4 rounded-full bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20">
+                <Mail className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                <span className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-card border border-border px-3 py-1 rounded-md text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  Send Email
+                </span>
+              </a>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+              <ArrowDown className="w-6 h-6 text-primary/60" />
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Keep all other sections unchanged */}
       {/* About Section */}
       <section id="about" className="py-20 px-6">
         <div className="container mx-auto">
