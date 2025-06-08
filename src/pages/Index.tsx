@@ -1,4 +1,4 @@
-import { Github, Mail, Download, MapPin, Code, Database, Wrench, BookOpen, Award, ExternalLink, ArrowDown } from "lucide-react";
+import { Github, Mail, Download, MapPin, Code, Database, Wrench, BookOpen, Award, ExternalLink, ArrowDown, PenTool, FileText, Users, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +9,44 @@ const Index = () => {
     tools: ["Arduino", "Blynk", "Jupyter", "VS Code"],
     soft: ["Content Writing", "Digital Marketing", "Team Management"]
   };
+
+  const contentWritingSamples = [
+    {
+      title: "The Future of IoT in Smart Cities",
+      type: "Technical Blog",
+      description: "Exploring how Internet of Things technology is revolutionizing urban infrastructure and improving quality of life for millions of residents.",
+      readTime: "5 min read",
+      category: "Technology"
+    },
+    {
+      title: "Machine Learning for Beginners: A Complete Guide",
+      type: "Educational Article",
+      description: "Breaking down complex ML concepts into digestible insights for newcomers to the field of artificial intelligence.",
+      readTime: "8 min read",
+      category: "Education"
+    },
+    {
+      title: "Building Your First Arduino Project",
+      type: "Tutorial",
+      description: "Step-by-step guide for beginners to create their first IoT project using Arduino and basic sensors.",
+      readTime: "12 min read",
+      category: "Tutorial"
+    },
+    {
+      title: "Top 10 Programming Languages to Learn in 2024",
+      type: "Listicle",
+      description: "Comprehensive analysis of the most in-demand programming languages and their career prospects for aspiring developers.",
+      readTime: "6 min read",
+      category: "Career"
+    }
+  ];
+
+  const writingSkills = [
+    { skill: "Technical Writing", level: "Intermediate", icon: Code },
+    { skill: "Blog Content", level: "Advanced", icon: FileText },
+    { skill: "Social Media Copy", level: "Intermediate", icon: Users },
+    { skill: "SEO Content", level: "Beginner", icon: TrendingUp }
+  ];
 
   const projects = [
     {
@@ -42,6 +80,7 @@ const Index = () => {
               <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
               <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
               <a href="#skills" className="text-foreground hover:text-primary transition-colors">Skills</a>
+              <a href="#writing" className="text-foreground hover:text-primary transition-colors">Writing</a>
               <a href="#projects" className="text-foreground hover:text-primary transition-colors">Projects</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
             </div>
@@ -131,7 +170,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Keep all other sections unchanged */}
       {/* About Section */}
       <section id="about" className="py-20 px-6">
         <div className="container mx-auto">
@@ -225,6 +263,97 @@ const Index = () => {
                     </Badge>
                   ))}
                 </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* New Content Writing Section */}
+      <section id="writing" className="py-20 px-6 bg-gradient-to-br from-primary/5 to-transparent">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 gradient-text">Content Writing</h2>
+          
+          {/* Writing Skills Overview */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20 card-hover">
+              <CardHeader className="text-center">
+                <CardTitle className="flex items-center justify-center space-x-2 text-2xl">
+                  <PenTool className="w-7 h-7 text-primary" />
+                  <span>Writing Expertise</span>
+                </CardTitle>
+                <CardDescription className="text-lg">
+                  Crafting engaging content that bridges the gap between complex technology and everyday understanding
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {writingSkills.map((item) => {
+                    const IconComponent = item.icon;
+                    return (
+                      <div key={item.skill} className="flex items-center space-x-4 p-4 rounded-lg bg-primary/5 border border-primary/10">
+                        <IconComponent className="w-6 h-6 text-primary" />
+                        <div className="flex-1">
+                          <p className="font-semibold">{item.skill}</p>
+                          <Badge variant="outline" className="border-primary/30 text-primary mt-1">
+                            {item.level}
+                          </Badge>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Sample Content Pieces */}
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-12 text-foreground">Sample Content Portfolio</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {contentWritingSamples.map((sample) => (
+                <Card key={sample.title} className="bg-card/50 backdrop-blur-sm border-primary/20 card-hover">
+                  <CardHeader>
+                    <div className="flex justify-between items-start mb-2">
+                      <Badge variant="outline" className="border-primary/30 text-primary">
+                        {sample.type}
+                      </Badge>
+                      <span className="text-sm text-muted-foreground">{sample.readTime}</span>
+                    </div>
+                    <CardTitle className="text-xl">{sample.title}</CardTitle>
+                    <CardDescription className="text-muted-foreground">
+                      {sample.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex justify-between items-center">
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                        {sample.category}
+                      </Badge>
+                      <Button variant="ghost" size="sm" className="text-primary hover:text-primary-foreground hover:bg-primary">
+                        <FileText className="w-4 h-4 mr-2" />
+                        Read Sample
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Writing Services CTA */}
+          <div className="max-w-2xl mx-auto mt-16 text-center">
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold mb-4">Need Quality Content?</h3>
+                <p className="text-muted-foreground mb-6">
+                  I specialize in creating technical content that's both informative and accessible. 
+                  From blog posts to documentation, I can help communicate your ideas effectively.
+                </p>
+                <Button className="bg-primary hover:bg-primary/80 text-primary-foreground">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Discuss Your Project
+                </Button>
               </CardContent>
             </Card>
           </div>
