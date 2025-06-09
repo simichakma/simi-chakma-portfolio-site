@@ -62,8 +62,12 @@ const Index = () => {
             {/* Profile Image with enhanced styling */}
             <div className="relative mx-auto mb-12 group">
               <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-primary via-blue-500 to-primary p-1 shadow-2xl shadow-primary/20 transition-all duration-500 group-hover:scale-105">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-card to-muted flex items-center justify-center text-4xl font-bold text-primary relative overflow-hidden">
-                  <span className="relative z-10">SC</span>
+                <div className="w-full h-full rounded-full overflow-hidden relative">
+                  <img 
+                    src="/lovable-uploads/c822bf92-50bb-434b-ab5c-58c63e82e363.png" 
+                    alt="Simi Chakma"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
