@@ -1,65 +1,26 @@
 # Welcome to my portfolio project
 
-## Project info
-Use Lovable (via the web interface)
-Visit the project URL: https://lovable.dev/projects/072325e6-3aca-41f2-a898-4cb7983dc822
+## Simi Chakma – AI-Generated Portfolio
 
-Use the AI-powered prompt interface to make live changes.
+This portfolio was generated using Lovable.dev, an AI-powered tool that creates visually appealing and responsive personal websites automatically. Instead of building the site manually from scratch, I experimented with Lovable to demonstrate a creative and efficient approach to portfolio development using modern AI tools.
 
-Changes are automatically committed to the connected repository.
+ ## What’s Included
+Responsive Design powered by Lovable's modern layout engine
 
-1. Use Your Local IDE (e.g., VS Code)
-   
-To make edits locally:
+Clean, Professional UI with built-in sections like About Me, Projects, Skills, and Contact
 
-# Step 1: Clone the repository
-git clone <YOUR_GIT_URL>  # Replace with the actual Git URL
+Minimal Code Overhead – auto-generated HTML/CSS/JS for fast deployment
 
-# Step 2: Go into your project folder
-cd <YOUR_PROJECT_NAME>
+Deployed on GitHub Pages for free and seamless hosting
 
-# Step 3: Install dependencies
-npm install
+Custom Edits – I made slight adjustments post-generation for personal branding
 
-# Step 4: Start the development server
-npm run dev
-2. You need to have Node.js and npm installed. If not, use nvm to install them:
-nvm install node
+ ## Purpose
+This project reflects how AI tools can accelerate and simplify professional portfolio creation, especially for developers and students who want a strong online presence but have limited design experience. It also showcases my interest in leveraging innovative tools and technologies in creative ways.
 
-3. Edit Directly on GitHub
-Open your GitHub repo.
+## Live Preview
+Check out the live version of the site here: simichakma.github.io/simi-chakma-portfolio-site
 
-Navigate to the file you want to edit.
-
-Click the pencil ✏️ icon to edit.
-
-Commit the changes directly via the GitHub UI.
-
-4. Use GitHub Codespaces
-On your GitHub repo page, click Code > Codespaces > New Codespace.
-
-This opens a VS Code-like environment in your browser.
-
-Make your edits, commit, and push
-
-🛠️ Technologies Used
-This project uses modern front-end tooling:
-
-Vite – Fast build tool and dev server
-
-TypeScript – Strongly typed JavaScript
-
-React – UI library for components
-
-shadcn/ui – Accessible, styled component library
-
-Tailwind CSS – Utility-first CSS framework
-
-🚀 How to Deploy
-From Lovable:
-
-Click on Share in the top-right.
-
-Select Publish.
-
-Your site will be deployed and publicly accessible.
+## Project Link on Lovable
+Here’s the original Lovable project I generated:
+https://lovable.dev/projects/072325e6-3aca-41f2-a898-4cb7983dc822
