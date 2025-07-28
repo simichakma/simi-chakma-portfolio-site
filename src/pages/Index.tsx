@@ -6,29 +6,29 @@ import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   const skills = {
-    technical: ["Python", "C", "Linux (basic)", "DSA", "HTML", "CSS", "JavaScript", "MySQL"],
-    tools: ["Arduino", "Blynk", "Jupyter", "VS Code"],
-    soft: ["Content Writing", "Digital Marketing", "Team Management"]
+    technical: ["Python", "C", "Unix/basic", "DSA", "HTML", "CSS", "JavaScript", "MySQL", "PostgreSQL"],
+    tools: ["Blynk", "Arduino", "Jupyter Notebooks", "Visual Studio", "PyCharm", "Git & GitHub", "Google Sheet"],
+    testing: ["SDLC & STLC Processes", "Manual Testing", "Test Case Writing", "Bug Report Generation", "Website Testing", "API Testing", "Selenium/Python", "WebDriver", "Pytest", "Postman", "SoapUI"]
   };
 
   const projects = [
     {
-      title: "Smart Plant Monitoring System",
-      description: "An IoT system using Blynk and Arduino to monitor plant health in real-time.",
-      technologies: ["Arduino", "Blynk", "IoT", "C++"],
-      github: "https://github.com/simichakma/smart-plant-monitoring"
+      title: "Deep Fake Detection (AI using Python)",
+      description: "An AI-powered system for detecting deepfake media using Python and machine learning algorithms.",
+      technologies: ["Python", "AI", "Machine Learning", "Computer Vision"],
+      github: "https://github.com/simichakma/DeepFake-Detection"
     },
     {
-      title: "DeepFake Detection",
-      description: "A Python-based AI model for identifying deepfake media using machine learning.",
-      technologies: ["Python", "Machine Learning", "OpenCV", "TensorFlow"],
-      github: "https://github.com/simichakma/deepfake-detection"
+      title: "Manual Testing QA Harbor Service",
+      description: "Comprehensive manual testing project focusing on QA processes and bug reporting for web services.",
+      technologies: ["Manual Testing", "Test Cases", "Bug Reports", "QA Processes"],
+      github: "https://github.com/simichakma/Manual_Testing_QA-Harbor_service"
     },
     {
-      title: "Portfolio Website",
-      description: "A responsive personal portfolio website built with modern web technologies.",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com/simichakma/portfolio"
+      title: "SauceDemo Selenium Automation",
+      description: "Automated testing framework using Selenium WebDriver for e-commerce website testing.",
+      technologies: ["Selenium", "Python", "WebDriver", "Automation Testing", "Pytest"],
+      github: "https://github.com/simichakma/Selenium_Automation1"
     }
   ];
 
@@ -88,12 +88,12 @@ const Index = () => {
               </div>
               
               <h2 className="text-2xl md:text-4xl font-light text-muted-foreground animate-fade-in delay-300">
-                Aspiring <span className="text-primary font-semibold">Computer Science Engineer</span>
+                <span className="text-primary font-semibold">Software Quality Assurance</span> Engineer
               </h2>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in delay-500">
-                Turning ideas into tech solutions with <span className="text-primary font-medium">IoT</span>, 
-                <span className="text-primary font-medium"> Machine Learning</span>, and innovative code.
+                Passionate about ensuring <span className="text-primary font-medium">software quality</span> and creating 
+                <span className="text-primary font-medium"> efficient automated solutions</span> for real-world issues.
               </p>
             </div>
 
@@ -144,10 +144,10 @@ const Index = () => {
             <Card className="bg-card/50 backdrop-blur-sm border-primary/20 card-hover">
               <CardContent className="p-8">
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  I'm a Computer Science student with hands-on experience in IoT and ML projects. 
-                  I enjoy developing innovative tech solutions and continuously learning new technologies. 
-                  Currently in my final year at Primeasia University, I'm passionate about creating 
-                  meaningful impact through technology.
+                  Recent Computer Science and Engineering graduate from Primeasia University with hands-on project 
+                  experience in software testing, web development, and IoT systems. Currently focused on building 
+                  a career in Software Quality Assurance or development, and looking for an internship or entry-level 
+                  role where I can apply my technical skills and learn from a professional team.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex items-center space-x-3">
@@ -160,11 +160,11 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Award className="w-5 h-5 text-primary" />
-                    <span>B.Tech in CSE - Final Year</span>
+                    <span>B.Tech in CSE (2021-2026)</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Code className="w-5 h-5 text-primary" />
-                    <span>CGPA: 3.08</span>
+                    <span>CGPA: 3.08 | SQA Training: QA Harbor Limited</span>
                   </div>
                 </div>
               </CardContent>
@@ -182,7 +182,7 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Code className="w-6 h-6 text-primary" />
-                  <span>Technical Skills</span>
+                  <span>Programming & Web</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -218,12 +218,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Database className="w-6 h-6 text-primary" />
-                  <span>Soft Skills</span>
+                  <span>Software Testing (QA)</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {skills.soft.map((skill) => (
+                  {skills.testing.map((skill) => (
                     <Badge key={skill} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                       {skill}
                     </Badge>
