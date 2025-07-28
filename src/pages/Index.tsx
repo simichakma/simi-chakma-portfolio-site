@@ -156,10 +156,11 @@ const Index = () => {
             <Card className="bg-card/50 backdrop-blur-sm border-primary/20 card-hover">
               <CardContent className="p-8">
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Recent Computer Science and Engineering graduate from Primeasia University with hands-on project 
-                  experience in software testing, web development, and IoT systems. Currently focused on building 
-                  a career in Software Quality Assurance or development, and looking for an internship or entry-level 
-                  role where I can apply my technical skills and learn from a professional team.
+                  Recent Computer Science and Engineering (CSE) graduate from Primeasia University 
+                  with hands-on project experience in software testing, web development, and IoT 
+                  systems. I'm currently focused on building a career in Software Quality 
+                  Assurance or development, and looking for an internship or entry-level role where I can 
+                  apply my technical skills and learn from a professional team.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex items-center space-x-3">
