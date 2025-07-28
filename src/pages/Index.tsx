@@ -25,6 +25,12 @@ const Index = () => {
       github: "https://github.com/simichakma/DeepFake-Detection"
     },
     {
+      title: "Manual Testing Bkash App Login Page",
+      description: "Manual testing project for Bkash mobile application login functionality, focusing on user authentication flows and security testing.",
+      technologies: ["Manual Testing", "Mobile App Testing", "Security Testing", "Test Cases", "Bug Reporting"],
+      github: "https://github.com/simichakma/Manual_Testing_Bkash_app_Login_page"
+    },
+    {
       title: "Manual Testing QA Harbor Service",
       description: "Comprehensive manual testing project focusing on QA processes and bug reporting for web services.",
       technologies: ["Manual Testing", "Test Cases", "Bug Reports", "QA Processes"],
