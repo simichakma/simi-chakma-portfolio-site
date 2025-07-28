@@ -13,6 +13,12 @@ const Index = () => {
 
   const projects = [
     {
+      title: "Credit Card Fraud Analysis",
+      description: "Data analysis project for detecting fraudulent credit card transactions using statistical methods and machine learning.",
+      technologies: ["Python", "Data Analysis", "Pandas", "Machine Learning", "Statistics"],
+      github: "https://github.com/simichakma/Credit_Card_Fraud_Analysis"
+    },
+    {
       title: "Deep Fake Detection (AI using Python)",
       description: "An AI-powered system for detecting deepfake media using Python and machine learning algorithms.",
       technologies: ["Python", "AI", "Machine Learning", "Computer Vision"],
